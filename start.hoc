@@ -1,0 +1,71 @@
+objref menubox
+proc diffin2D(){
+load_file("diffin2d.hoc")
+menubox.unmap()
+}
+proc diff2D3D(){
+load_file("dif2d3d.hoc")
+menubox.unmap()
+}
+proc diffin3D(){
+load_file("diffin3d.hoc")
+menubox.unmap()
+}
+proc glubes2D(){
+load_file("dif2aabs.hoc")
+}
+proc glubes2D3D(){
+load_file("dif23abs.hoc")
+}
+proc glubes3D(){
+load_file("dif3dabs.hoc")
+}
+proc glubes5(){
+load_file("dif5aabs.hoc")
+
+}
+proc glubes4(){
+load_file("dif4dabs.hoc")
+}
+proc glubes6(){
+load_file("dif6aabs.hoc")
+}
+proc fbm(){
+load_file("diffbm.hoc")
+menubox.unmap()
+}
+proc glures23(){
+load_file("dif23rbs.hoc")
+}
+proc MenuPanel(){
+menubox=new VBox()
+menubox.intercept(1)
+xpanel("Glutamate diffusion models")
+xlabel("Choose glutamate diffusion model")
+xmenu("Without boundary")
+xradiobutton ("2D","diffin2D()")
+xradiobutton("2D/3D", "diff2D3D()")
+xradiobutton("3D", "diffin3D()")
+xmenu()
+xmenu("With absorbing boundary")
+xradiobutton ("2D","glubes2D()")
+xradiobutton("2D/3D", "glubes2D3D()")
+xradiobutton("3D", "glubes3D()")
+xmenu()
+xmenu("With closed boundary")
+xradiobutton ("2D","glubes5()")
+xradiobutton("2D/3D", "glubes6()")
+xradiobutton("3D", "glubes4()")
+xmenu()
+xbutton("Fractional Brownian motion","fbm()")
+xmenu("Direct glutamate summation") 
+xbutton("Fig. 10 of the paper", "glures23()")
+xmenu()
+
+xpanel()
+menubox.intercept(0)
+menubox.map()
+}
+MenuPanel()
+
+

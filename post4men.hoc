@@ -1,0 +1,37 @@
+objref MenuPOST
+MenuPOST = new VBox()
+MenuPOST.intercept(1)
+
+Ampa_CO=GrCell[0].ampa1[0].ko
+Ampa_OC= GrCell[0].ampa1[0].kc
+Ampa_OD= GrCell[0].ampa1[0].kd
+Ampa_DO= GrCell[0].ampa1[0].kr
+Ampa_Kb= GrCell[0].ampa1[0].kb
+Ampa_Gmax= GrCell[0].ampa1[0].gbarampa
+
+xpanel("1")
+	xlabel("AMPA COD scheme")
+	xvalue("CO (ms^-1)","Ampa_CO", 1,"UpDateAMPA()", 0, 0 )
+	xvalue("OC (ms^-1)","Ampa_OC", 1,"UpDateAMPA()", 0, 0 )
+	xvalue("OD (ms^-1)","Ampa_OD", 1,"UpDateAMPA()", 0, 0 )
+	xvalue("DO (ms^-1)","Ampa_DO", 1,"UpDateAMPA()", 0, 0 )
+	xvalue("Kb (mM)","Ampa_Kb", 1,"UpDateAMPA()", 0, 0 )
+	xvalue("Gmax (pS)","Ampa_Gmax", 1,"UpDateAMPA()", 0, 0 )
+xpanel()
+
+MenuPOST.intercept(0)
+MenuPOST.map("Postsinaptic parameters")
+
+
+proc UpDateAMPA(){
+	for (i=0;i<=3;i=i+1) {
+		GrCell[0].ampa1[0].ko=Ampa_CO
+		GrCell[0].ampa1[0].kc=Ampa_OC
+		GrCell[0].ampa1[0].kd=Ampa_OD
+		GrCell[0].ampa1[0].kr=Ampa_DO
+		GrCell[0].ampa1[0].gbarampa=Ampa_Gmax
+ GrCell[0].ampa1[0].kb=Ampa_Kb
+	}
+	}
+
+

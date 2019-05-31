@@ -1,0 +1,19 @@
+objref  Menufi
+Menufi = new VBox( )
+Menufi.intercept(1)
+xpanel("Fig.7")
+xlabel("Choose figure")
+xradiobutton ("Activation of AMPARs by direct release of glutamate", "dir( )")
+xradiobutton ("Activation of AMPARs by spillover of glutamate", "spill( )")
+xpanel()
+Menufi.intercept(0)
+Menufi.map( )
+proc dir( ) {
+GrCell[0].syn1.inclugluspill=0
+GrCell[0].syn1.inclugludir=1
+}
+proc spill( ) {
+GrCell[0].syn1.inclugluspill=1
+GrCell[0].syn1.inclugludir=0
+}
+

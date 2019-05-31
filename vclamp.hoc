@@ -1,0 +1,21 @@
+objref h6
+h6 = new HBox()
+h6.intercept(1)
+   
+xpanel("1")   
+
+xvalue("Dur (ms)","GrCell[0].stim0.dur[0]", 1,"", 0, 0 )
+xvalue("Amp (nA)","GrCell[0].stim0.amp[0]", 1,"", 0, 0 )
+xpanel()
+
+h6.intercept(0)
+h6.map("Vclamp")
+
+
+
+
+
+
+
+
+

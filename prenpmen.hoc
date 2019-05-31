@@ -1,0 +1,69 @@
+objref MenuPre
+
+MenuPre = new VBox()
+MenuPre.intercept(1)
+
+
+Power= GrCell[0].syn1[0].fracpow
+Dnet= GrCell[0].syn1[0].Deff
+rPSD= GrCell[0].syn1[0].rPSD
+rabs= GrCell[0].syn1[0].rabs
+nu= GrCell[0].syn1[0].nu
+meandist= GrCell[0].syn1[0].meandist
+Rmf= GrCell[0].syn1[0].Rmf
+alpha= GrCell[0].syn1[0].alpha
+inclugludir= GrCell[0].syn1[0].inclugludir
+inclugluspill= GrCell[0].syn1[0].inclugluspill
+Popeak= GrCell[0].syn1[0].Popeak
+td1= GrCell[0].syn1[0].td1
+tm1= GrCell[0].syn1[0].tm1
+ts1= GrCell[0].syn1[0].ts1
+
+
+xpanel("1")   
+xlabel("Presinaptic parameters")
+
+xvalue("Net-diffusion coefficient","Dnet", 1,"UpDatePre()", 0, 0)
+xvalue("Radius of absorbtion","rabs", 1,"UpDatePre()", 0, 0)
+xvalue("Radius of PSD","rPSD", 1,"UpDatePre()", 0, 0)
+xvalue("Density of sites","nu", 1,"UpDatePre()", 0, 0)
+xvalue("Mean distance","meandist", 1,"UpDatePre()", 0, 0)
+xvalue("Radius MF terminal","Rmf", 1,"UpDatePre()", 0, 0)
+xvalue("alpha","alpha", 1,"UpDatePre()", 0, 0)
+xstatebutton("Include direct component",&inclugludir,"UpDatePre()")
+xstatebutton("Include spillover component",&inclugluspill,"UpDatePre()")
+xvalue("Popeak","Popeak", 1,"UpDatePre()", 0, 0)
+xvalue("tm1","tm1", 1,"UpDatePre()", 0, 0)
+xvalue("td1","td1", 1,"UpDatePre()", 0, 0)
+xvalue("ts1","ts1", 1,"UpDatePre()", 0, 0)
+xvalue("Power","Power", 1,"UpDatePre()", 0, 0)
+
+xpanel()
+MenuPre.intercept(0)
+MenuPre.map("Presinaptic parameters")
+
+
+
+
+proc UpDatePre(){
+	for (i=0;i<=3;i=i+1) {
+		
+GrCell[0].syn1[i].fracpow=Power
+GrCell[0].syn1[i].Deff=Dnet
+GrCell[0].syn1[i].rabs=rabs
+GrCell[0].syn1[i].rPSD=rPSD
+GrCell[0].syn1[i].nu=nu
+GrCell[0].syn1[i].meandist=meandist
+GrCell[0].syn1[i].Rmf=Rmf
+GrCell[0].syn1[i].alpha=alpha
+GrCell[0].syn1[i].inclugludir=inclugludir
+GrCell[0].syn1[i].inclugluspill=inclugluspill
+GrCell[0].syn1[i].Popeak=Popeak
+GrCell[0].syn1[i].td1=td1
+GrCell[0].syn1[i].tm1=tm1
+GrCell[0].syn1[i].ts1=ts1
+}
+	print "Updated data presynaptic"
+}
+
+

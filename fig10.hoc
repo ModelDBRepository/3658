@@ -1,0 +1,31 @@
+objref  Menufigs
+Menufigs = new VBox( )
+Menufigs.intercept(1)
+xpanel("Fig.10")
+xlabel("Choose figure")
+xradiobutton ("Fig. 10a", "glures23a( )")
+xradiobutton ("Fig. 10b", "glures23b( )")
+xradiobutton ("Fig. 10c", "glures23c( )")
+xradiobutton ("Fig. 10d", "glures23d( )")
+xpanel()
+Menufigs.intercept(0)
+Menufigs.map("Fig. 10")
+proc glures23a( ) {
+GrCell[0].syn1.inclugludir1spike=1
+GrCell[0].syn1.inclugludir=1
+}
+proc glures23b( ) {
+GrCell[0].syn1.inclugludir1spike=0
+GrCell[0].syn1.inclugludir=1
+}
+proc glures23c( ) {
+GrCell[0].syn1.inclugludir=0
+GrCell[0].syn1.inclugludir1spike=1
+
+}
+proc glures23d( ) {
+GrCell[0].syn1.inclugludir1spike=0
+GrCell[0].syn1.inclugludir=0
+}
+
+

@@ -1,0 +1,25 @@
+objref GRCparams
+GRCparams = new VBox()
+GRCparams.intercept(1)
+   
+xpanel("1")   
+xlabel("Conductances")
+xvalue("epas","GrCell[0].soma.e_pas", 1,"", 0, 0 )
+xvalue("gpas","GrCell[0].soma.g_pas", 1,"", 0, 0 )
+xpanel()
+xpanel("2")
+xlabel("Clamp")
+xmenu("VClamp...")
+	GrCell[0].stim0.dur[0] = 1000 
+	GrCell[0].stim0.amp[0] = -70 
+xbutton("VClamp","param1()")
+xmenu()
+xpanel()
+
+GRCparams.intercept(0)
+GRCparams.map("Granule Cell Parameters")
+
+proc param1(){
+xopen("vclamp.hoc")
+}
+
