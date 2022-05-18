@@ -37,8 +37,8 @@ ts1=0 (ms) : 0.16 (ms) , shift of spillover EPSC
 VERBATIM
 int i;
 double l[100000];
-extern float bessj1();
-extern float bessj0();
+extern float bessj1(float);
+extern float bessj0(float);
 ENDVERBATIM
 ASSIGNED{
 Podir

@@ -126,8 +126,7 @@ tx1=t
 }
 
 VERBATIM
-float bessj1(x)
-float x;
+float bessj1(float x)
 {
 float ax,z;
 double xx,y,ans,ans1,ans2;
@@ -149,8 +148,7 @@ if (x<0.0) ans=-ans;
 }
 return ans;
 }
-float bessj0(x)
-float x;
+float bessj0(float x)
 {
 float ax,z;
 double xx,y,ans,ans1,ans2;

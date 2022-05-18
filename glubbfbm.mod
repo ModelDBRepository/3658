@@ -39,7 +39,7 @@ fracpow=0.7 :anomalous diffusion exponent
 VERBATIM
 int i;
 double l[200000];
-extern float bessj1();
+extern float bessj1(float);
 ENDVERBATIM
 ASSIGNED{
 Podir
