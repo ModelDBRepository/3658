@@ -35,8 +35,8 @@ ts1=0 (ms) : 0.16 (ms) , shift of experimental direct EPSC
 tm1=0 (ms) : 0.16 (ms) , shift of experimental spillover EPSC
 }
 VERBATIM
-int i;
-double l[100000];
+static int i;
+static double l[100000];
 float bessj1(float);
 float bessj0(float);
 ENDVERBATIM

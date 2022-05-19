@@ -48,8 +48,8 @@ td1=0: shift for experimental direct EPSC
 ts1=0: shift for experimental spillover EPSC
  }
 VERBATIM
-int i, n,ii, includir[50],incluspill[50];
-double l[200000], t0[50],nuac[50],add;
+static int i, n,ii, includir[50],incluspill[50];
+static double l[200000], t0[50],nuac[50],add;
 extern float bessj1(float);
 ENDVERBATIM
 ASSIGNED{

@@ -35,8 +35,8 @@ td1=0 (ms) : 0.16(ms) , shift of direct EPSC
 ts1=0 (ms) : 0.16 (ms) , shift of spillover EPSC
 }
 VERBATIM
-int i;
-double l[100000];
+static int i;
+static double l[100000];
 extern float bessj1(float);
 extern float bessj0(float);
 ENDVERBATIM
