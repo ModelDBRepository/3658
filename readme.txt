@@ -64,7 +64,7 @@ Simulations.
     to a lesser extent by spillover glutamate. All parameters of the
     model can be changed in the respective boxes.
 
-Update
-------
-
-Mod files compatibility fixes for upcoming NEURON 9.0, 8.2 and 8.1
+Changelog
+---------
+2022-05: Updated MOD files to contain valid C++ and be compatible
+         with the upcoming versions 8.2 and 9.0 of NEURON.
