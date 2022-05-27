@@ -35,9 +35,9 @@ td1= 0 : 0.16(ms), shift of experimental direct EPSC
 ts1= 0 : 0.16 (ms), shift of experimental spillover EPSC 
 }
 VERBATIM
-int i;
-double l[50000];
-extern float bessj1();
+static int i;
+static double l[50000];
+extern float bessj1(float);
 ENDVERBATIM
 ASSIGNED{
 Podir
